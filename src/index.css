@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #FF4438;
+  --secondary-color: #36B5C5;
+  --accent-color: #FFD100;
+  --orange-color: #FF7A50;
+  --bg-color: #FFF5F5;
+}
+
+body {
+  font-family: 'Tajawal', sans-serif;
+  background-color: var(--bg-color);
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Confetti animation */
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+.confetti div {
+  animation: float 3s infinite ease-in-out;
+}
+
+.confetti div:nth-child(1) { animation-delay: 0s; }
+.confetti div:nth-child(2) { animation-delay: 0.5s; }
+.confetti div:nth-child(3) { animation-delay: 1s; }
+.confetti div:nth-child(4) { animation-delay: 1.5s; }
+.confetti div:nth-child(5) { animation-delay: 2s; }
+.confetti div:nth-child(6) { animation-delay: 2.5s; }
+
+/* Button hover effects */
+button {
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Social media icons hover effect */
+footer svg {
+  transition: transform 0.3s ease;
+}
+
+footer svg:hover {
+  transform: scale(1.2);
+}
+
+/* Activity cards hover effects */
+.activities .bg-white {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.activities .bg-white:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #cc3629;
+}
+@font-face {
+  font-family: 'PT Serif';
+  src: url('/fonts/PT_Serif/PTSerif-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+/* @font-face {
+  font-family: 'Vazirmatn';
+  src: url('/fonts/Vazirmatn/Vazirmatn-VariableFont_wght.ttf') format('truetype');
+  font-weight: 400;
+} */
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('/fonts/Vazirmatn/static/Vazirmatn-ExtraBold.ttf') format('truetype');
+  font-weight: 400;
+}
