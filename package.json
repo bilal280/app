@@ -3,8 +3,7 @@
   "name": "app",
   "private": true,
   "version": "0.0.0",
-  "type": "module"و
-  
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -31,4 +30,5 @@
     "vite": "^6.2.1"
   }
 }
+
 
